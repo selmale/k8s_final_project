@@ -3,4 +3,4 @@
 3. kubectl create namespace apx-x998-shachar
 4. kubectl get nodes -o json > /tmp/nodes_shachar
 5. kubectl create deploy messaging --image k8s.gcr.io/serve_hostname
-   kubectl expose deploy messaging --port 6379 --target-port 6379 --type ClusterIP --name=messaging-service
+   kubectl expose deploy messaging --port 80 --target-port 6379 --type ClusterIP --name=messaging-service
