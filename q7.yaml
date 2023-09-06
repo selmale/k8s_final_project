@@ -3,5 +3,19 @@ kind: Deployment
 metadata:
   name: hr-web-app
 spec:
-  image: kodekloud/webapp-color
-  replicas: 2
+  selector:
+    matchLabels:
+      app: nginx
+  replicas: 2 
+  template: 
+    metadata:
+      labels:
+        app: nginx
+
+    spec:
+      containers:
+      - name: nginx
+        image: kodekloud/webapp-color
+        ports:
+        - containerPort: 80
+
