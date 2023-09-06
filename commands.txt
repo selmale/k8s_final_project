@@ -5,4 +5,4 @@
 5. kubectl create deploy messaging --image k8s.gcr.io/serve_hostname
    kubectl expose deploy messaging --port 80 --target-port 6379 --type ClusterIP --name=messaging-service
 6. kubectl apply -f q6.yaml
-7.
+7. kubectl apply -f q7.yaml
