@@ -1,0 +1,3 @@
+1. kubectl create -f q1.yaml
+2. kubectl create -f q2.yaml
+3.
