@@ -6,6 +6,7 @@
    kubectl expose deploy messaging --port 80 --target-port 6379 --type ClusterIP --name=messaging-service
 6. kubectl apply -f q6.yaml
 7. kubectl apply -f q7.yaml
-8.
+8. sudo cp q8.yaml /etc/kubernetes/manifests/.
+   kubectl get po -A
 9. kubectl create namespace finance-shachar
    kubectl apply -f q9.yaml
