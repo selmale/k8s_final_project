@@ -10,3 +10,5 @@
    kubectl get po -A
 9. kubectl create namespace finance-shachar
    kubectl apply -f q9.yaml
+   kubectl get po -n finance-shachar
+10.
