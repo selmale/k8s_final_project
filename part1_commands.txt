@@ -13,3 +13,8 @@
    kubectl get po -n finance-shachar
 10.kubectl apply -f q10.yaml
 11.kubectl apply -f q11.yaml
+12.kubectl apply -f q12.yaml
+13.
+14.
+15.
+16.
