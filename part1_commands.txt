@@ -14,7 +14,10 @@
 10.kubectl apply -f q10.yaml
 11.kubectl apply -f q11.yaml
 12.kubectl apply -f q12.yaml
-13.
+13.kubectl apply -f q13.yaml
+   kubectl set image deployments/nginx-deploy nginx-deploy=nginx:1.17 --record
+   kubectl get pods,deployment,rs
+   kubectl rollout history deployment nginx-deploy
 14.
 15.
 16.
