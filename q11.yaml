@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: redis-storage-shachar
+spec:
+  containers:
+  - name: redis-storage-shachar
+    image: redis:alpine
+    volumeMounts:
+    - name: redis-storage-shachar
+      mountPath: /data/redis
+  volumes:
+  - name: redis-storage-shachar
+    emptyDir: {}
