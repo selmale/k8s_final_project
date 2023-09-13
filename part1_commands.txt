@@ -12,7 +12,9 @@
    kubectl apply -f q9.yaml
    kubectl get po -n finance-shachar
 10.kubectl apply -f q10.yaml
+   kubectl get pv
 11.kubectl apply -f q11.yaml
+   kubectl describe pod
 12.kubectl apply -f q12.yaml
 13.kubectl apply -f q13.yaml
    kubectl set image deployments/nginx-deploy nginx-deploy=nginx:1.17 --record
