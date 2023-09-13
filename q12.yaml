@@ -9,12 +9,12 @@ spec:
   containers:
   - name: use-pv
     image: nginx
-    resources: {}
-  dnsPolicy: ClusterFirst
-  restartPolicy: Always
     volumeMounts:
     - name: pv-1
       mountPath: /data
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
   volumes:
   - name: pv-1
     emptyDir: {}
