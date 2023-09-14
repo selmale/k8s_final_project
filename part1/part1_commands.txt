@@ -20,6 +20,11 @@
    kubectl set image deployments/nginx-deploy nginx-deploy=nginx:1.17 --record
    kubectl get pods,deployment,rs
    kubectl rollout history deployment nginx-deploy
-14.
+14.kubectl apply -f q14.yaml
+   kubectl apply -f service.yaml
+   kubectl get svc nginx-resolver-service
+   kubectl run dnslookup-pod --image busybox:1.28 curl http://nginx-resolver-service:80
+   kubectl exec -it dnslookup-pod -- nslookup nginx-resolver > /root/nginx-shachar.pod
+   kubectl exec -it dnslookup-pod -- nslookup nginx-resolver-service > /root/nginx-shachar.svc
 15.
 16.
