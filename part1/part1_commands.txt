@@ -26,5 +26,6 @@
    kubectl run dnslookup-pod --image busybox:1.28 curl http://nginx-resolver-service:80
    kubectl exec -it dnslookup-pod -- nslookup nginx-resolver > /root/nginx-shachar.pod
    kubectl exec -it dnslookup-pod -- nslookup nginx-resolver-service > /root/nginx-shachar.svc
-15.
+15.sudo cp q15.yaml /etc/kubernetes/manifests/.
+   kubectl get po -A
 16.
