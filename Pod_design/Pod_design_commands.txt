@@ -1,1 +1,7 @@
-
+1. kubectl run pod1 --image=nginx --labels=env=production
+   kubectl run pod2 --image=nginx --labels=env=production
+   kubectl run pod3 --image=nginx --labels=env=dev
+   kubectl run pod4 --image=nginx --labels=env=dev
+   kubectl get po --show-labels
+2. 
+   
