@@ -1,1 +1,4 @@
-
+1. kubectl create deploy webapp --image=nginx --dry-run -o yaml > webapp.yaml
+   kubectl apply -f webapp.yaml
+2. kubectl rollout status deployment/webapp
+3. 
