@@ -1,4 +1,4 @@
-#I used the minikube so initially i tried to create it on minikube and then changed the node name to ''worker' in the yaml
+#I used the minikube so initially i tried to create it on 'kubernetes.io/hostname: minikube' and then changed the node name to 'nodeName: nginxnode' in the yaml
 apiVersion: v1
 kind: Pod
 metadata:
@@ -12,7 +12,7 @@ spec:
     name: nginx
     resources: {}
   nodeSelector:
-    kubernetes.io/hostname: worker
+    nodeName: nginxnode
   dnsPolicy: ClusterFirst
   restartPolicy: Never
 status: {}
