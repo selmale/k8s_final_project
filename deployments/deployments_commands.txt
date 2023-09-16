@@ -1,4 +1,6 @@
 1. kubectl create deploy webapp --image=nginx --dry-run -o yaml > webapp.yaml
    kubectl apply -f webapp.yaml
 2. kubectl rollout status deployment/webapp
-3. 
+3. kubectl get replicaset -l app=webapp
+4. kubectl get replicaset -l app=webapp -o yaml > replicaset.yaml
+   kubectl get pods -l app=webapp -o yaml > pods.yaml
