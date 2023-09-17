@@ -4,4 +4,10 @@
 3. kubectl get replicaset -l app=webapp
 4. kubectl get replicaset -l app=webapp -o yaml > replicaset.yaml
    kubectl get pods -l app=webapp -o yaml > pods.yaml
-5. 
+5. kubectl delete deployment webapp
+6. kubectl create deploy webapp --image=nginx:1.17.1 --dry-run -o yaml > webapp.yaml
+   #added port section with port 80
+   kubectl apply -f webapp.yaml
+   kubectl describe deployment webapp | grep Image:
+7. kubectl set image deployment/webapp nginx=nginx:1.17.4
+   kubectl describe deployment webapp | grep Image:
