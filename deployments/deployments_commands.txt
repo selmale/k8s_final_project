@@ -9,5 +9,22 @@
    #added port section with port 80
    kubectl apply -f webapp.yaml
    kubectl describe deployment webapp | grep Image:
-7. kubectl set image deployment/webapp nginx=nginx:1.17.4
+7. kubectl set image deployment/webapp nginx=nginx:1.17.4 --record=true
    kubectl describe deployment webapp | grep Image:
+8. kubectl rollout history deployment/webapp
+9. kubectl rollout undo deployment/webapp
+   kubectl rollout status deployment/webapp
+   kubectl describe deployment webapp | grep Image:
+10.kubectl set image deployment/webapp nginx=nginx:1.100 --record=true
+   kubectl get pods
+   rollout undo deployment/webapp
+   kubectl rollout status deployment/webapp
+   kubectl describe deployment webapp | grep Image:
+   kubectl rollout history deploy webapp --revision=7 # output: error: unable to find the specified revision
+   kubectl rollout history deployment/webapp --revision=3
+   kubectl set image deployment/webapp nginx=nginx:latest
+   kubectl rollout history deploy webapp
+11.
+   
+   
+   
