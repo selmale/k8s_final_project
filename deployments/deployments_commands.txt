@@ -26,7 +26,11 @@
    kubectl rollout history deploy webapp
 11.kubectl apply -f webapp_hpa.yaml
 12. ? # question 12 was empty
-13.
+13.kubectl delete hpa webapp-hpa
+   kubectl delete deployment webapp
+14.kubectl create job hello-job --image=busybox --dry-run -o yaml -- echo "Hello I am from job" > hello-job.yaml
+   # add complitions: 10
+   kubectl apply -f hello-job.yaml
    
    
    
