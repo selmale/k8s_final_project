@@ -28,4 +28,4 @@
    kubectl exec -it dnslookup-pod -- nslookup nginx-resolver-service > /root/nginx-shachar.svc
 15.sudo cp q15.yaml /etc/kubernetes/manifests/.
    kubectl get po -A
-16.
+16.kubectl apply -f q16.yaml
